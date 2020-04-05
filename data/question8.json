@@ -1,0 +1,67 @@
+
+//Question 8
+
+
+{
+
+"number_of_time_steps" : 4 ,  //positive integer
+"time_step_duration" : 120 ,    //minutes
+"demand" : [ 1000, 1600 ,600 ,900 ],     // MW
+
+
+
+"thermal_plants" :
+[
+{
+ "name" : "thf1" ,
+ "proportionnal_cost" : 10.0 , // euros/MWh
+ "production_levels" : [0, 1000] , //MW
+
+ "mandatory_shutdowns" : [
+         {
+         "start_date" : 240,
+         "end_date" : 360
+         }
+         ]
+}
+,
+{
+ "name" : "thf2" ,
+ "proportionnal_cost" : 22.0 , // euros/MWh
+  "production_levels" : [0, 550] //MW
+
+}
+,
+{
+ "name" : "thf3" ,
+ "proportionnal_cost" : 50.0 , // euros/MWh
+  "production_levels" : [0, 200] //MW
+
+}
+],
+"reservoirs":[{
+ "water_value": 0.0,
+ "maximum_volume": 1440000.0, //m3
+ "upstream_hydroplants_ids": [],
+ "downstream_hydroplants_ids": [
+  0
+ ],
+ "initial_volume": 1440000,
+ "minimum_volume": 0.0,
+ "id": 0,
+ "inflows": 0.0
+}
+],
+ "hydro_powerplants":[
+{
+"maximum_decrease_rate":3333.3,
+"downstream_delay":0,
+"id":0,
+"operating_levels":[{
+ "flow": 75.0,
+ "id": 0,
+ "power": 75.0
+}],
+"maximum_increase_rate":3333.3
+ } ]
+}

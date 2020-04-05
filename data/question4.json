@@ -1,0 +1,46 @@
+
+//Question 3
+
+
+{
+
+"number_of_time_steps" : 4 ,  //positive integer
+"time_step_duration" : 120 ,    //minutes
+"demand" : [ 1000, 1600 ,600 ,600 ],     // MW
+
+
+
+"thermal_plants" :
+[
+{
+ "name" : "thf1" ,
+ "proportionnal_cost" : 10.0 , // euros/MWh
+ "production_levels" : [100, 1000] , //MW
+ "startup_cost" : 30000 ,  //euros
+ "mandatory_shutdowns" : [
+         {
+         "start_date" : 240,
+         "end_date" : 360
+         }
+         ]
+
+}
+,
+{
+ "name" : "thf2" ,
+ "proportionnal_cost" : 22.0 , // euros/MWh
+  "production_levels" : [100, 550] , //MW
+ "startup_cost" : 2200 //euros
+}
+,
+{
+ "name" : "thf3" ,
+ "proportionnal_cost" : 50.0 , // euros/MWh
+  "production_levels" : [100, 200] , //MW
+ "startup_cost" : 5000  //euros
+
+
+
+}
+]
+}
